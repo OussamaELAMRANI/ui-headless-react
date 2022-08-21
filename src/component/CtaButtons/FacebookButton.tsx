@@ -4,7 +4,7 @@ import { FacebookIcon } from "../../icon/FacebookIcon";
 
 export const FacebookButton: FC = (prop) => {
   return (
-    <Buttons
+    <Buttonss
       withIcon
       variant={"primary"}
       className={"facebook text-2xl"}
@@ -14,6 +14,6 @@ export const FacebookButton: FC = (prop) => {
         <FacebookIcon />
         Facebook
       </>
-    </Buttons>
+    </Buttonss>
   );
 };
