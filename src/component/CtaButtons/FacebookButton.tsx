@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Button from "../../ui/Button/dd";
+import Button from "../../ui/Button";
 import { FacebookIcon } from "../../icon/FacebookIcon";
 
 export const FacebookButton: FC = (prop) => {
@@ -11,7 +11,7 @@ export const FacebookButton: FC = (prop) => {
       {...prop}
     >
       <>
-        <FacebookIcon dd={""} />
+        <FacebookIcon />
         Facebook
       </>
     </Button>
