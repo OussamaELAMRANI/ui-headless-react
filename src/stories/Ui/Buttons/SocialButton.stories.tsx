@@ -1,10 +1,10 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "../ui/Button";
+import { FacebookButton } from "../../../component/CtaButtons";
 
 export default {
   title: "Example/Button",
-  component: Button,
+  component: FacebookButton,
   argTypes: {
     variant: {
       options: ["primary", "secondary", "success", "danger", "warning"],
@@ -16,14 +16,17 @@ export default {
       control: { type: "select" },
       defaultValue: "md",
     },
+    pill: {
+      control: "boolean",
+      defaultValue: false,
+    },
   },
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof FacebookButton>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof FacebookButton> = (args) => (
+  <FacebookButton {...args} />
+);
 
-export const UiButton = Template.bind({});
+export const Facebook = Template.bind({});
 
-UiButton.args = {
-  children: "text button",
-  size: "md",
-};
+Facebook.args = {};
