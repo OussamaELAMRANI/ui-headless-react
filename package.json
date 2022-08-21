@@ -39,10 +39,5 @@
   "description": "reusable ui with tailwind",
   "main": "main.tsx",
   "author": "Oussama ELAMRANI <oussama1elamrani@gmail.com>",
-  "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  }
+  "license": "MIT"
 }
