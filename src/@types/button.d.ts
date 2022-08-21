@@ -1,6 +1,7 @@
 type SocialMediaType = "facebook" | "twitter";
+type sizeType = "sm" | "md" | "lg" | "xl";
 
-interface ButtonUiTupe
+interface ButtonUiType
   extends React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
@@ -9,4 +10,5 @@ interface ButtonUiTupe
   variant: "primary" | "secondary" | "success" | "danger" | "warning";
   pill?: boolean;
   withIcon?: boolean;
+  size?: sizeType;
 }

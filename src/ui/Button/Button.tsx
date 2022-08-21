@@ -2,11 +2,12 @@ import { FC } from "react";
 import style from "./button.module.css";
 import classNames from "classnames";
 
-const Button: FC<ButtonUiTupe> = ({
+const Button: FC<ButtonUiType> = ({
   children,
   variant,
   pill,
   withIcon = false,
+  size = "md",
   ...props
 }) => {
   const styles = props.className
@@ -18,6 +19,7 @@ const Button: FC<ButtonUiTupe> = ({
   const clx = classNames(
     style.button,
     style[variant],
+    style[size],
     { [style.pill]: pill },
     styles
   );
