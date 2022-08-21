@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "check-types": "tsc --noemit",
     "lint:fix": "prettier --write .",
     "eslint": "eslint .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "npm run eslint && npm run check-types"
   },
   "dependencies": {
     "autoprefixer": "^10.4.8",
@@ -26,6 +28,7 @@
     "@typescript-eslint/parser": "^5.33.1",
     "@vitejs/plugin-react": "^2.0.1",
     "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
@@ -38,6 +41,6 @@
   "author": "Oussama ELAMRANI <oussama1elamrani@gmail.com>",
   "license": "MIT",
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "lint --ignore-unknown"
   }
 }
