@@ -11,7 +11,7 @@
     "lint:fix": "prettier --write .",
     "eslint": "eslint .",
     "prepare": "husky install",
-    "lint": "npm run eslint && npm run check-types"
+    "pretty-quick": "npm run eslint && npm run check-types && pretty-quick --staged"
   },
   "dependencies": {
     "autoprefixer": "^10.4.8",
@@ -40,7 +40,9 @@
   "main": "main.tsx",
   "author": "Oussama ELAMRANI <oussama1elamrani@gmail.com>",
   "license": "MIT",
-  "lint-staged": {
-    "**/*": "lint --ignore-unknown"
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
