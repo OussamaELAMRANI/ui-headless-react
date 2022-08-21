@@ -1,5 +1,5 @@
-import Button from "./ui/Button";
-import { FacebookButton } from "./component/CtaButtons/FacebookButton";
+import Button from "@/ui/Button";
+import { FacebookButton } from "@/component/CtaButtons/FacebookButton";
 
 function App() {
   return (
