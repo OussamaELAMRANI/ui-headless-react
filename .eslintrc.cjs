@@ -4,6 +4,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:storybook/recommended",
   ],
   parserOptions: {
     tsconfigRootDir: __dirname,
