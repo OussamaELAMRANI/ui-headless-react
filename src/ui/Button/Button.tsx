@@ -9,10 +9,21 @@ const Button: FC<ButtonUiTupe> = ({
   withIcon = false,
   ...props
 }) => {
-  const clx = classNames(style.button, style[variant], { [style.pill]: pill });
+  const styles = props.className
+    ?.split(" ")
+    .map((cls) => style[cls] || cls)
+    .join(" ")
+    .trim();
+
+  const clx = classNames(
+    style.button,
+    style[variant],
+    { [style.pill]: pill },
+    styles
+  );
 
   return (
-    <button type='button' className={clx} {...props}>
+    <button type="button" {...props} className={clx}>
       {withIcon ? <span className={style.cta}>{children}</span> : children}
     </button>
   );
