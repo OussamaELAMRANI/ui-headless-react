@@ -1,5 +1,6 @@
 type SocialMediaType = "facebook" | "twitter";
 type sizeType = "sm" | "md" | "lg" | "xl";
+type variantType = "primary" | "secondary" | "success" | "danger" | "warning";
 
 interface ButtonUiType
   extends React.DetailedHTMLProps<
@@ -7,7 +8,7 @@ interface ButtonUiType
     HTMLButtonElement
   > {
   children: JSX.Element | string;
-  variant: "primary" | "secondary" | "success" | "danger" | "warning";
+  variant: variantType;
   pill?: boolean;
   withIcon?: boolean;
   size?: sizeType;

@@ -5,32 +5,25 @@ import Button from "../ui/Button";
 export default {
   title: "Example/Button",
   component: Button,
+  argTypes: {
+    variant: {
+      options: ["primary", "secondary", "success", "danger", "warning"],
+      control: { type: "select" },
+      defaultValue: "primary",
+    },
+    size: {
+      options: ["sm", "md", "lg", "xl"],
+      control: { type: "select" },
+      defaultValue: "md",
+    },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const UiButton = Template.bind({});
 
-Primary.args = {
-  variant: "primary",
+UiButton.args = {
   children: "text button",
   size: "md",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  variant: "secondary",
-  children: "text button",
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: "xl",
-  children: "text button",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: "sm",
-  children: "text button",
 };
