@@ -1,3 +1,6 @@
+const { mergeConfig } = require("vite");
+const { resolve } = require("path");
+
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -12,5 +15,20 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+  },
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      resolve: {
+        alias: [
+          {
+            find: /^@\/(.*)/,
+            replacement: resolve(__dirname, "../src/$1"),
+          },
+        ],
+      },
+      optimizeDeps: {
+        include: ["storybook-dark-mode"],
+      },
+    });
   },
 };
