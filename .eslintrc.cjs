@@ -16,4 +16,5 @@ module.exports = {
   rules: {
     quotes: ["error", "double"],
   },
+  ignorePatterns: ["jest.config.ts"],
 };
